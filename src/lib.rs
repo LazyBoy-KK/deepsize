@@ -121,7 +121,9 @@ pub trait DeepSizeOf {
     ///     }
     /// }
     /// ```
-    fn deep_size_of_children(&self, context: &mut Context) -> usize;
+    fn deep_size_of_children(&self, _context: &mut Context) -> usize {
+		0
+	}
 }
 
 #[cfg(not(feature = "std"))]
